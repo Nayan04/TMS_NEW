@@ -111,7 +111,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <?php }else{?>
                   <td><?php echo $data['current_status'];?></td>
                   <?php } ?>
-                  <td class="no-print"><a href="view_panel.php?enq_id=<?php echo $data['enquiry_id'];?>" class="btn btn-primary" title="View Enquiry In Detail">View Details </a> &nbsp;
+                  <td class="no-print"><a href="../../enquiry/views/view_panel.php?enq_id=<?php echo $data['enquiry_id'];?>" class="btn btn-primary" title="View Enquiry In Detail">View Details </a> &nbsp;
                     </li></td>
                 </tr>
                 <?php 
