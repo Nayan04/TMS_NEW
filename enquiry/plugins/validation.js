@@ -255,6 +255,7 @@ function add_new_enq()
     var fmid = $('#firm_type option:selected').val();
     var cname = $('#company_name').val();
     var pos = $('#designation').val();
+	var contact_person = $('#contact_person').val();
     //-----------------------------------//
     var street = $('#street').val();
     var taluka = $('#taluka').val();
@@ -317,9 +318,43 @@ function add_new_enq()
             lndsze.push('none');
         }      
     }); 
-    var vlgeno = $('#villaNo').val();
-    var prono = $('#proNo').val();
-	var prolist = $('#prolist').val();
+	var vlgeno = [];
+    $('.villaNo').each(function () {
+        if ($(this).val()!='') {
+            vlgeno.push($(this).val());
+            //pro_ids.push($(this).val());
+            //pro_name.push($(this).val());
+        } else {
+           // pro_ids.push(0);
+            vlgeno.push('0');
+        }      
+    }); 
+   // var vlgeno = $('#villaNo').val();
+   // var prono = $('#proNo').val();
+	var prono = [];
+    $('.proNo').each(function () {
+        if ($(this).val()!='') {
+            prono.push($(this).val());
+            //pro_ids.push($(this).val());
+            //pro_name.push($(this).val());
+        } else {
+           // pro_ids.push(0);
+            prono.push('0');
+        }      
+    }); 
+	//var prolist = $('#prolist').val();
+	var prolist = [];
+    $('.prolist').each(function () {
+        if ($(this).val()!='') {
+            prolist.push($(this).val());
+			//alert();
+            //pro_ids.push($(this).val());
+            //pro_name.push($(this).val());
+        } else {
+           // pro_ids.push(0);
+            prolist.push('0');
+        }      
+    }); 
     var prodes = $('#programdes').val();
     var lstcert = $('#lastcerti').val();
     var empno = $('#noemp').val();
@@ -331,14 +366,14 @@ function add_new_enq()
         decle=1;
     }
     var subpro = $('#sub').val();
-   // var dataString = 'fmname=' + fmname + '&fmid=' + fmid + '&pos=' + pos + "&street=" + street + "&taluka=" + taluka + "&district=" + dist + "&stat=" + stat + "&country=" + country + "&pincode=" + pincode + "&mobile=" + mobile + "&phno=" + phone + "&email=" + email + "&location=" + location + "&pro_id=" + pro_ids + "&pro_name=" + pro_name + "&frmrno=" + frmrno + "&lndsze=" + lndsze + "&vlgeno=" + vlgeno + "&prono=" + prono + "&prodes=" + prodes + "&lstcert=" + lstcert + "&empno=" + empno + "&decle=" + decle + "&cname=" + cname + "&sub=" + subpro + '&ics=' + ics;
-   // alert(dataString); exit();
+   // var dataString = 'fmname=' + fmname + '&fmid=' + fmid + '&pos=' + pos + "&street=" + street + "&taluka=" + taluka + "&district=" + dist + "&stat=" + stat + "&country=" + country + "&pincode=" + pincode + "&mobile=" + mobile + "&phno=" + phone + "&email=" + email + "&location=" + location + "&pro_id=" + pro_ids + "&pro_name=" + pro_name + "&frmrno=" + frmrno + "&lndsze=" + lndsze + "&vlgeno=" + vlgeno + "&prono=" + prono + "&prodes=" + prodes + "&lstcert=" + lstcert + "&empno=" + empno + "&decle=" + decle + "&cname=" + cname + "&sub=" + subpro + '&ics=' + ics+'&subloc='+subloc+'&prolist='+prolist+'&contact_person='+contact_person;
+    //alert(dataString); exit();
     var re=validation_form();
     if(re==true){
         $("#bar").addClass('overlay');
   $("#bar_img").addClass('fa fa-refresh fa-spin');
     //-------------------------------------//
-    var dataString = 'fmname=' + fmname + '&fmid=' + fmid + '&pos=' + pos + "&street=" + street + "&taluka=" + taluka + "&district=" + dist + "&stat=" + stat + "&country=" + country + "&pincode=" + pincode + "&mobile=" + mobile + "&phno=" + phone + "&email=" + email + "&location=" + location + "&pro_id=" + pro_ids + "&pro_name=" + pro_name + "&frmrno=" + frmrno + "&lndsze=" + lndsze + "&vlgeno=" + vlgeno + "&prono=" + prono + "&prodes=" + prodes + "&lstcert=" + lstcert + "&empno=" + empno + "&decle=" + decle + "&cname=" + cname + "&sub=" + subpro + '&ics=' + ics+'&subloc='+subloc+'&prolist='+prolist;
+    var dataString = 'fmname=' + fmname + '&fmid=' + fmid + '&pos=' + pos + "&street=" + street + "&taluka=" + taluka + "&district=" + dist + "&stat=" + stat + "&country=" + country + "&pincode=" + pincode + "&mobile=" + mobile + "&phno=" + phone + "&email=" + email + "&location=" + location + "&pro_id=" + pro_ids + "&pro_name=" + pro_name + "&frmrno=" + frmrno + "&lndsze=" + lndsze + "&vlgeno=" + vlgeno + "&prono=" + prono + "&prodes=" + prodes + "&lstcert=" + lstcert + "&empno=" + empno + "&decle=" + decle + "&cname=" + cname + "&sub=" + subpro + '&ics=' + ics+'&subloc='+subloc+'&prolist='+prolist+'&contact_person='+contact_person;
     
     $.post("../controller/enq_form_submit.php", dataString).done(function (data)
     {

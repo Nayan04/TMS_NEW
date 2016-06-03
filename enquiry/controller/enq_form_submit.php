@@ -10,6 +10,7 @@ $fmname=$_REQUEST['fmname'];
 $fmid=$_REQUEST['fmid'];
 $pos=$_REQUEST['pos'];
 $company=$_REQUEST['cname'];
+$c_person=$_REQUEST['contact_person'];
 //--------------------------------------
 $street=$_REQUEST['street'];
 $taluka=$_REQUEST['taluka'];
@@ -55,8 +56,8 @@ if($count[0]==0){
 }
 
 //-----------------contact_table-----------------------//////
-$column="enquiry_id,firm_type,firm_name,company_name,position,street,taluka,district,state,country,pincode,mobile,phone,email,project_location,ics_name";
-$insertP=$obj_db->insert_enq_per($table,$column,$enq_id,$fmid,$fmname,$company,$pos,$street,$taluka,$district,$stat,$country,$pincode,$mobile,$phno,$email,$location,$ics);
+$column="enquiry_id,firm_type,firm_name,company_name,position,contact_person,street,taluka,district,state,country,pincode,mobile,phone,email,project_location,ics_name";
+$insertP=$obj_db->insert_enq_per($table,$column,$enq_id,$fmid,$fmname,$company,$pos,$c_person,$street,$taluka,$district,$stat,$country,$pincode,$mobile,$phno,$email,$location,$ics);
 //-----------------contact_table-----------------------//////
 
 //-----------------certification table-----------------//////

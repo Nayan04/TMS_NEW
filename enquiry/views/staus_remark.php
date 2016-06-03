@@ -39,7 +39,7 @@
             </div>
             <div class="box-footer">
               <button type="reset" class="btn btn-primary">Cancel</button>
-              <button type="button" class="btn btn-primary pull-center" onClick="change_status()">Add</button>
+              <button type="button" class="btn btn-primary pull-center" onClick="change_status()">Change</button>
             </div>
           </form>
         </div>
@@ -165,7 +165,7 @@ $dept=$db->get_dept();?>
             </div>
             <div class="box-footer">
               <button type="reset" class="btn btn-primary">Cancel</button>
-              <button type="button" class="btn btn-primary pull-center" onClick="AddClient()">Add Client</button>
+              <button type="button" class="btn btn-primary pull-center" onClick="AddClient()">Register Client</button>
             </div>
           </form>
         </div>

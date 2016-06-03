@@ -10,18 +10,31 @@ var container='';
         });
 
         $('#Adds').click(function() {
-            alert()
-            if (iCnt <= 5) {
+           // alert()
+            if (iCnt <= 4) {
 
                 iCnt = iCnt + 1;
 
                 // ADD TEXTBOX.
-                $(container).append('<div class="form-group" ><label for="inputEmail3" class="col-sm-1 control-label">ICS Name'+ iCnt +'</label>'+
-             '<div class="col-sm-3"><input type="text" class="form-control ics" id="ics"'+ iCnt +' name="ics" placeholder="ICS NAME (optional)"></div>'+'<label for="inputEmail3" class="col-sm-1 control-label">No. of Farmers</label>'
-            +'<div class="col-xs-3"><input type="text" class="form-control farmerNo" id="farmerNo"'+iCnt+ 'name="farmerNo" placeholder="No. of Farmers"></div>'+
-            '<label for="inputEmail3" class="col-sm-1 control-label">Land Offered (Ha.)</label>'+
-            '<div class="col-xs-3"><input type="text" class="form-control landsize " id="landsize"'+iCnt+ ' name="landsize" placeholder="Size Of Land">'+
-            '</div></div>');
+                $(container).append('<div class="form-group" ><label for="inputEmail3" class="col-sm-1 control-label">ICS Name '+ iCnt +'</label>'+
+             '<div class="col-sm-3"><input type="text" class="form-control ics" id="ics"'+ iCnt +' name="ics" placeholder="ICS NAME (optional)"></div>'+'<label for="inputEmail3" class="col-sm-1 control-label">No. of Farmers '+ iCnt +'</label>'
+            +'<div class="col-xs-3"><input type="text" class="form-control farmerNo" id="farmerNo'+iCnt+ 'name="farmerNo" placeholder="No. of Farmers"></div>'+
+            '<label for="inputEmail3" class="col-sm-1 control-label">Land Offered (Ha.) '+ iCnt +'</label>'+
+            '<div class="col-xs-3"><input type="text" class="form-control landsize" id="landsize'+iCnt+ '" name="landsize" placeholder="Size Of Land">'+
+            '</div></div><div class="form-group">'+
+             '<label for="inputEmail3" class="col-sm-1 control-label">No. of Villages '+ iCnt +'</label>'+
+            '<div class="col-xs-3">'+
+              '<input type="text" class="form-control villaNo" id="villaNo"'+iCnt+' name="villaNo" placeholder="No Of Village">'+
+            '</div>'+
+            '<label for="inputEmail3" class="col-sm-1 control-label">No. of Product '+ iCnt +'</label>'+
+            '<div class="col-xs-3">'+
+              '<input type="text" class="form-control proNo" id="proNo"'+iCnt+' name="proNo" placeholder="NO Of Product">'+
+            '</div>'+
+            '<label for="inputEmail3" class="col-sm-1 control-label">Product List '+ iCnt +'</label>'+
+            '<div class="col-xs-3">'+
+              '<input type="text" class="form-control prolist" id="prolist"'+iCnt+' name="prolist" placeholder="Product List">'+
+            '</div>'+
+          '</div>');
 
                 // SHOW SUBMIT BUTTON IF ATLEAST "1" ELEMENT HAS BEEN CREATED.
                 

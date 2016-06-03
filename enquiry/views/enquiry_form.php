@@ -34,7 +34,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="box-body">
             <!-- -------------------------------------------------------------------------------------------------->
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-1 control-label">Type</label>
+              <label for="inputEmail3" class="col-sm-1 control-label">Type <b class="astrik">*</b></label>
               <div class="col-sm-2">
                 <select class="form-control select2" name="firm_type" id="firm_type" >
                   <option selected="selected" value="none">--select--</option>
@@ -45,22 +45,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <option value="other">other</option>
                 </select>
               </div>
-              <label for="inputEmail3" class="col-sm-1 control-label">Name</label>
+              <label for="inputEmail3" class="col-sm-1 control-label">Company Name <b class="astrik">*</b></label>
               <div class="col-sm-3">
                   <input data-validation="required" type="text" class="form-control" name="company_name" id="company_name" placeholder="Name of company/farm/NGO/group">
               </div>
-              <label for="inputEmail3" class="col-sm-2 control-label">Posision/Title</label>
+              <label for="inputEmail3" class="col-sm-2 control-label">Position/ title <b class="astrik">*</b></label>
               <div class="col-sm-2">
                 <input type="text" class="form-control" id="designation" name="designation" placeholder="Comapny Designation">
               </div>
             </div>
+            
             <!-- -------------------------------------------------------------------------------------------------->
-            <!--div class="form-group">
-                      <label for="inputEmail3" class="col-sm-2 control-label">Mailing Address</label>
-                      <div class="col-sm-10">
-                        <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
+            <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">Name of Responsible Person </label>
+                      <div class="col-sm-5">
+                       <input type="text" class="form-control" id="contact_person" name="contact_person" placeholder="Name of Responsible Person">
                       </div>
-                    </div-->
+                    </div>
             <!-- -------------------------------------------------------------------------------------------------->
             <div class="box-header with-border" style="margin-bottom:15px;">
               <h3 class="box-title">Mailing Address</h3>
@@ -68,16 +69,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- /.box-header -->
             <!-- -------------------------------------------------------------------------------------------------->
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-1 control-label ">Street</label>
+              <label for="inputEmail3" class="col-sm-1 control-label ">Street <b class="astrik">*</b></label>
               <div class="col-xs-3">
                   
                 <input type="text" class="form-control " id="street" name="street" placeholder="street">
               </div>
-              <label for="inputEmail3" class="col-sm-1 control-label">Taluka</label>
+              <label for="inputEmail3" class="col-sm-1 control-label">Taluka <b class="astrik">*</b></label>
               <div class="col-xs-3">
                 <input type="text" class="form-control " id="taluka" name="taluka" placeholder="Taluka">
               </div>
-              <label for="inputEmail3" class="col-sm-1 control-label">Country</label>
+              <label for="inputEmail3" class="col-sm-1 control-label">Country <b class="astrik">*</b></label>
               <div class="col-xs-3">
                   <?php $cou=$db->get_country(); ?>
                   <select class="form-control" id="country" name="country" onchange="get_state()">
@@ -91,26 +92,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             <!-- -------------------------------------------------------------------------------------------------->
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-1 control-label">State</label>
+              <label for="inputEmail3" class="col-sm-1 control-label">State <b class="astrik">*</b></label>
               <div class="col-xs-3">
                   <select class="form-control" id="state" name="state" onchange="get_dist()">
                       
                   </select>
               </div>
-              <label for="inputEmail3" class="col-sm-1 control-label">Dist./City</label>
+              <label for="inputEmail3" class="col-sm-1 control-label">Dist./City <b class="astrik">*</b></label>
               <div class="col-xs-3">
                 <select class="form-control" id="district" name="district">
                       
                   </select>
               </div>
-              <label for="inputEmail3" class="col-sm-1 control-label">Pincode</label>
+              <label for="inputEmail3" class="col-sm-1 control-label">Pincode <b class="astrik">*</b></label>
               <div class="col-xs-3">
                   <input type="text" class="form-control "  size="6" id="pincode" name="pincode" placeholder="Pincodes">
               </div>
             </div>
             <!-- -------------------------------------------------------------------------------------------------->
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-1 control-label">Mobile</label>
+              <label for="inputEmail3" class="col-sm-1 control-label">Mobile <b class="astrik">*</b></label>
               <div class="col-xs-3">
                 <input type="text" class="form-control" id="mobile" name="mobile"  placeholder="Mobile" data-inputmask='"mask": "9999999999"' data-mask>
               </div>
@@ -118,14 +119,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="col-xs-3">
                 <input type="text" class="form-control" id="phone" name="phone"  placeholder="Phone" data-inputmask='"mask": "99999999999"' data-mask>
               </div>
-              <label for="inputEmail3" class="col-sm-1 control-label">Email</label>
+              <label for="inputEmail3" class="col-sm-1 control-label">Email <b class="astrik">*</b></label>
               <div class="col-xs-3">
                 <input type="email" class="form-control " id="email" name="email" placeholder="Email">
               </div>
             </div>
             <!-- -------------------------------------------------------------------------------------------------->
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-1 control-label">Project Location</label>
+              <label for="inputEmail3" class="col-sm-1 control-label">Project Location <b class="astrik">*</b></label>
               <div class="col-sm-6">
               <textarea id="location" class="form-control " name="location" placeholder="Full Address Of Project Location"></textarea>
                
@@ -136,7 +137,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               
             </div>
             <!-- -------------------------------------------------------------------------------------------------->
-            <div class="box-header with-border" style="margin-bottom:15px;"> CERTIFICATION SERVICES REQUESTED (Please tick '√' appropriate activity) </div>
+            <div class="box-header with-border" style="margin-bottom:15px;"> <h3 class="box-title">CERTIFICATION SERVICES REQUESTED (Please tick '√' appropriate activity) <b class="astrik">*</b></h3></div>
             <!-- /.box-header -->
             <!-- -------------------------------------------------------------------------------------------------->
             <div class="box-group" id="accordion">
@@ -160,7 +161,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <h4 class="box-title">
                                     <a data-toggle="collapse" data-parent="#accordion" href="#<?php echo $href; ?>">
                                         <?php echo $programs[1]; ?>
-                                    </a>
+                                    </a><b class="astrik">*</b>
                                 </h4>
                             </div>
                        
@@ -206,13 +207,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             
           <!-- -------------------------------------------------------------------------------------------------->
-          <div class="box-header with-border" style="margin-bottom:15px;"> INFORMATION REQUIRED FOR QUOTATION </div>
+          <div class="box-header with-border" style="margin-bottom:15px;"> <h3 class="box-title"> INFORMATION REQUIRED FOR QUOTATION</h3> </div>
           <!-- /.box-header -->
           <!-- -------------------------------------------------------------------------------------------------->
           <div class="form-group" >
               <div class="col-xs-12 " id="AddRemove"><a id="Adds" class="btn label-primary">Add More</a>&nbsp;&nbsp;<a id="Remove" class="btn label-primary">Remove</a></div>
           </div>
-          <div class="form-group" id="GG_container">
+          <div id="GG_container">
+          <div class="form-group" >
               
               <label for="inputEmail3" class="col-sm-1 control-label">ICS Name</label>
               <div class="col-sm-3">
@@ -234,31 +236,40 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="form-group">
               <label for="inputEmail3" class="col-sm-1 control-label">No. of Villages</label>
             <div class="col-xs-3">
-              <input type="text" class="form-control " id="villaNo" name="villaNo" placeholder="No Of Village">
+              <input type="text" class="form-control villaNo" id="villaNo" name="villaNo" placeholder="No Of Village">
             </div>
             <label for="inputEmail3" class="col-sm-1 control-label">No. of Product</label>
             <div class="col-xs-3">
-              <input type="text" class="form-control" id="proNo" name="proNo" placeholder="NO Of Product">
+              <input type="text" class="form-control proNo" id="proNo" name="proNo" placeholder="NO Of Product">
             </div>
             <label for="inputEmail3" class="col-sm-1 control-label">Product List</label>
             <div class="col-xs-3">
-              <input type="text" class="form-control" id="prolist" name="prolist" placeholder="Product List">
+              <input type="text" class="form-control prolist" id="prolist" name="prolist" placeholder="Product List">
+               <span class="comment label-info">EX: IOP/NPOP (Don't use ,(Comma) as separator)</span>
             </div>
           </div>
+          </div>
           <div class="form-group">
-            <label for="inputEmail3" class="col-sm-6 control-label">If currently certified, provide the detail of certification program</label>
-            <div class="col-xs-6">
+            <label for="inputEmail3" class="col-sm-3 control-label">If currently certified, provide the detail of certification program</label>
+            <div class="col-xs-3">
               <input type="text" class="form-control " id="programdes" name="programdes" placeholder="Programs Details">
             </div>
             <label for="inputEmail3" class="col-sm-3 control-label">Name of last Certification Body </label>
             <div class="col-xs-3">
               <input type="text" class="form-control " id="lastcerti" name="lastcerti" placeholder="Enter Certification Body">
             </div>
+            </div>
+            <div class="form-group">
             <label for="inputEmail3" class="col-sm-4 control-label">How many employees at each operation sites / departments </label>
             <div class="col-xs-2">
               <input type="text" class="form-control " id="noemp" name="noemp" placeholder="No Of Employee">
-              <span class="comment">Only for ISO Certification</span>
+              </div>
+              <div class="col-xs-2">
+              <span class="comment label-info">Only for ISO Certification</span>
+              </div>
             </div>
+           
+            <div class="form-group">
             <label for="inputEmail3" class="col-sm-3 control-label">Detail of Sub-contracted Unit (If any)</label>
             <div class="col-xs-3">
               <input type="text" class="form-control " id="sub" name="sub" placeholder="Enter name of sub contract company / unit">
@@ -273,7 +284,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-xs-1" style="text-align:right">
               <input type="checkbox" class="minimal-red" id="trueness" name="trueness" value="1">
             </div>
-            <label for="inputEmail6" class="col-sm-11 control-label" style="text-align:left" >I do hereby affirm that all information’s provided in this enquiry form are true and correct. </label>
+            <!--label for="inputEmail6" class="col-sm-11 control-label" style="text-align:left" >I do hereby affirm that all information’s provided in this enquiry form are true and correct. </label-->
           </div>
           </div>
           <!-- /.box-body -->

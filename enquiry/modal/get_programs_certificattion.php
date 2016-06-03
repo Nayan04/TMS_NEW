@@ -383,9 +383,9 @@ public function select($table, $rows = '*', $where = null, $order = null)
 	}
 }
 
-function insert_enq_per($table,$column,$enq_id,$fmid,$fmname,$company,$pos,$street,$taluka,$district,$stat,$country,$pincode,$mobile,$phno,$email,$location,$ics){
+function insert_enq_per($table,$column,$enq_id,$fmid,$fmname,$company,$pos,$c_person,$street,$taluka,$district,$stat,$country,$pincode,$mobile,$phno,$email,$location,$ics){
 	
-	$sql = sprintf("insert into $table (". $column .")  values('$enq_id','$fmid','$fmname','$company','$pos','$street','$taluka','$district','$stat','$country','$pincode','$mobile','$phno','$email','$location','$ics')"); 
+	$sql = sprintf("insert into $table (". $column .")  values('$enq_id','$fmid','$fmname','$company','$pos','$c_person','$street','$taluka','$district','$stat','$country','$pincode','$mobile','$phno','$email','$location','$ics')"); 
 		            $rs=mysql_query($sql,$this->link);
 		            if(!$rs){
 			         echo mysql_error($this->link);

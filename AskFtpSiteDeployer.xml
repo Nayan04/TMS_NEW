@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><root><FtpSiteDeployer basedir="/" createbkp="yes" directorycloaking="CVS" host="67.227.167.223" pass="M@lle111" port="21" project-type="php" user="faircert"/></root>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><root><FtpSiteDeployer basedir="/httpdocs/admin" createbkp="no" directorycloaking="CVS" host="67.227.167.223" pass="M@lle111" port="21" project-type="php" user="faircert"/></root>

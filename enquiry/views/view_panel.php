@@ -217,7 +217,10 @@ if (mysql_num_rows($data) > 0) {
                                                     <td colspan="6"><div class="box-title"><h4>INFORMATION REQUIRED FOR QUOTATION</h4></div></tr>
                                                     <?php $ics=  explode(',',$row['ics_name']); 
                                                           $nofrmr=explode(',',$row['no_of_farmer']); 
-                                                          $land=explode(',',$row['land_offered']); 
+                                                          $land=explode(',',$row['land_offered']);
+														   $novil=explode(',',$row['no_of_village']);
+														    $nopro=explode(',',$row['no_of_product']);
+															$pro_list=explode(',',$row['product_list']);
                                                     
                                                     ?>
                                                 <?php for($k=0;$k<sizeof($ics);$k++){ ?>
@@ -228,13 +231,21 @@ if (mysql_num_rows($data) > 0) {
                                                     <td>No of Farmers <?php echo $k+1; ?></td>
                                                     <td><?php echo $nofrmr[$k];  ?></td>
                                                 </tr>
+                                                <tr>
+                                                <td>No. of Villages</td>
+                                                <td><?php echo $novil[$k];  ?></td>
+                                                              
+                                                    <td>No. of Product </td>
+                                                    <td><?php echo $nopro[$k]; ?> </td> 
+                                                    <td> Product List </td>
+                                                    <td><?php echo $pro_list[$k]; ?> </td> 
+                                                </tr>
                                                 <?php } ?>
                                                 <tr>
 
-                                                        <td>No. of Villages</td>
-                                                    <td><?php echo $row['no_of_village']; ?> </td>               
-                                                    <td>No. of Product / Crops Requested for Certification (Attach product list)</td>
-                                                    <td><?php echo $row['no_of_product']; ?> </td>  
+                                                        
+                                                    
+                                                     
                                                     <td>If currently certified, provide the detail of certification program</td>
                                                     <td><?php echo $row['pre_certification_name']; ?></td>                 
                                                 </tr>
